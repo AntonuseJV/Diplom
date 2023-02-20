@@ -1,8 +1,6 @@
 package searching;
 
-/**
- * Класс, описывающий один элемент результата одного поиска.
- */
+
 public class PageEntry implements Comparable<PageEntry> {
     private final String pdfName;
     private final int page;

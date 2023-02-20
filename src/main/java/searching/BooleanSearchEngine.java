@@ -30,12 +30,7 @@ public class BooleanSearchEngine implements SearchEngine {
         }
     }
 
-    /**
-     * Метод индексации pdf файлов, в котором происходит чтение страниц каждого файла и выявление частоты встречи слова
-     *
-     * @param pdfsDir
-     * @throws IOException
-     */
+
     private void indexingPdfs(File pdfsDir) throws IOException {
         if (pdfsDir.isDirectory()) {
             for (File file : pdfsDir.listFiles()) {
@@ -48,11 +43,7 @@ public class BooleanSearchEngine implements SearchEngine {
         }
     }
 
-    /**
-     * Метод чтения каждой страницы pdf файла
-     * @param doc
-     * @param namePdf
-     */
+
     private void readingPagesPdfs(PdfDocument doc, String namePdf) {
         for (int pageNum = 1; pageNum <= doc.getNumberOfPages(); pageNum++) {
             PdfPage page = doc.getPage(pageNum);
@@ -62,12 +53,7 @@ public class BooleanSearchEngine implements SearchEngine {
         }
     }
 
-    /**
-     * Метод выявления частоты встречи слова
-     * @param words
-     * @param namePdf
-     * @param pageNum
-     */
+
     private void frequencyWordCount(String[] words, String namePdf, int pageNum) {
         Map<String, Integer> frequenceMap = new HashMap<>();
         for (String word : words) {

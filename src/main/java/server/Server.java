@@ -9,7 +9,9 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.List;
 
-
+/**
+ * Класс-сервер
+ */
 public class Server {
     private static final int PORT = 8989;
     private static final Gson GSON = new Gson();
