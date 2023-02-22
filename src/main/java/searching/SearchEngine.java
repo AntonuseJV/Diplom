@@ -7,3 +7,4 @@ public interface SearchEngine {
 
     List<PageEntry> search(String word);
 }
+
