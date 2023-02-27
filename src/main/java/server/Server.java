@@ -31,7 +31,7 @@ public class Server {
                     List<PageEntry> resultEntries = searchEngine.search(requestWord);
 
                     String responseJson = GSON.toJson(resultEntries);
-                    System.out.println(responseJson);
+                    out.println(responseJson);
                 }
             }
         } catch (IOException e) {
